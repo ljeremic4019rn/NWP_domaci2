@@ -12,6 +12,7 @@ import example.services.ServiceInter;
 
 @Controller
 public class ControllerA {
+
     @Autowired(verbose = true)
     private ServiceA serviceA;
 

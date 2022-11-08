@@ -17,6 +17,7 @@ public class DIEngine {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
 
 
     private static DIEngine instance;
@@ -61,12 +62,12 @@ public class DIEngine {
     public void controllerInitialisation(Object parentObj, Field[] fields) throws InstantiationException, IllegalAccessException, InvocationTargetException, NoSuchMethodException, ClassNotFoundException {
         System.out.println(ANSI_PURPLE + "--Recursion--" + ANSI_RESET);
 
-        System.out.println("-------------mapa--------------");
-        for (HashMap.Entry<String,Object> entry : singletonsMap.entrySet())
-            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+//        System.out.println("-------------mapa--------------");
+//        for (HashMap.Entry<String,Object> entry : singletonsMap.entrySet())
+//            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
 
         for(Field field : fields){
-            System.out.println(ANSI_YELLOW + "Field= " + ANSI_RESET + field);
+            System.out.println(ANSI_YELLOW + "Field= " + ANSI_RESET + ANSI_BLUE + field + ANSI_RESET);
 
             if(field.isAnnotationPresent(Autowired.class)){
                 Object obj = null;

@@ -7,6 +7,7 @@ import framework.injection.annotations.Qualifier;
 @Component
 @Qualifier("ComponentB")
 public class ComponentB implements ComponentInter {
+
     @Autowired(verbose = true)
     @Qualifier("ComponentC")
     private ComponentInter componentC;

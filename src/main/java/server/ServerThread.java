@@ -43,6 +43,7 @@ public class ServerThread implements Runnable{
     }
 
     public void run(){
+        System.out.println(" THE SERVER THREAD IS RUNNING" + this);
         try {
 
             Request request = this.generateRequest();

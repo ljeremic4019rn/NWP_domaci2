@@ -7,6 +7,7 @@ import framework.injection.annotations.Service;
 @Service
 @Qualifier("ServiceB")
 public class ServiceB implements ServiceInter {
+
     @Autowired(verbose = true)
     private ComponentB componentB;
 
