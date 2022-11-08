@@ -18,6 +18,7 @@ public class DIEngine {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_RED = "\u001B[31m";
 
 
     private static DIEngine instance;
@@ -67,7 +68,7 @@ public class DIEngine {
 //            System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
 
         for(Field field : fields){
-            System.out.println(ANSI_YELLOW + "Field= " + ANSI_RESET + ANSI_BLUE + field + ANSI_RESET);
+            System.out.println(ANSI_YELLOW + "Field: " + ANSI_RESET + ANSI_BLUE + field + ANSI_RESET);
 
             if(field.isAnnotationPresent(Autowired.class)){
                 Object obj = null;
@@ -118,8 +119,8 @@ public class DIEngine {
 
                 Autowired autowired = field.getAnnotation(Autowired.class);//ako je verbose ispisi dodatne informacije
                 if(autowired.verbose()){
-                    System.out.println("Initialized " + field.getType() + " " + field.getName() + " in "
-                            + parentObj.getClass().getName() + " on " + LocalDateTime.now() + " with hash code " + Objects.requireNonNull(obj).hashCode());
+                    System.out.println("[Initialized " + field.getType() + " " + field.getName() + " in " + parentObj.getClass().getName() +
+                            " on " + LocalDateTime.now() + " with hash code " + Objects.requireNonNull(obj).hashCode() + "]" + ANSI_RED + " verbose " + ANSI_RESET );
                 }
 
                 controllerInitialisation(obj, cl.getDeclaredFields());//udji rekurzivno u svaki objekat

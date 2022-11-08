@@ -23,11 +23,11 @@ public class ControllerA {
     @Qualifier("ServiceC")
     private ServiceInter serviceC;
 
-    @Path(path = "/methodA")
+    @Path(path = "/methodA1")
     @Get
-    public void methodA(){}
+    public void methodA1(){}
 
-    @Path(path = "/methodB")
+    @Path(path = "/methodA2")
     @Post
-    public void methodB(){}
+    public void methodA2(){}
 }
