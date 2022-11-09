@@ -1,8 +1,8 @@
 package example.services;
 
-import framework.injection.annotations.Autowired;
-import framework.injection.annotations.Qualifier;
-import framework.injection.annotations.Service;
+import framework.annotations.Autowired;
+import framework.annotations.Qualifier;
+import framework.annotations.Service;
 
 @Service
 @Qualifier("ServiceB")

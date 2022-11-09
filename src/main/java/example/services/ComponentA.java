@@ -1,8 +1,8 @@
 package example.services;
 
-import framework.injection.annotations.Autowired;
-import framework.injection.annotations.Bean;
-import framework.injection.annotations.Qualifier;
+import framework.annotations.Autowired;
+import framework.annotations.Bean;
+import framework.annotations.Qualifier;
 
 @Bean(scope = "prototype")
 @Qualifier("ComponentA")

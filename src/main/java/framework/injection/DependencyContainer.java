@@ -2,7 +2,7 @@ package framework.injection;
 
 import framework.exceptions.QualifierMustBeUniqueException;
 import framework.exceptions.NonExistingQualifierException;
-import framework.injection.annotations.Qualifier;
+import framework.annotations.Qualifier;
 import org.reflections.Reflections;
 import org.reflections.scanners.SubTypesScanner;
 

@@ -1,7 +1,7 @@
 package example.services;
 
-import framework.injection.annotations.Bean;
-import framework.injection.annotations.Qualifier;
+import framework.annotations.Bean;
+import framework.annotations.Qualifier;
 
 @Bean()
 @Qualifier("ServiceD")
